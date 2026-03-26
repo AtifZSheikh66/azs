@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZS - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f5f5f5;
+            line-height: 1.6;
+        }
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem 2rem;
+            border-bottom: 3px solid #e67e22;
+        }
+        .header h1 {
+            font-size: 1.8rem;
+        }
+        .header h1 span {
+            color: #e67e22;
+        }
+        .nav {
+            background: #34495e;
+            padding: 0.8rem 2rem;
+        }
+        .nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            font-weight: 500;
+        }
+        .nav a:hover {
+            color: #e67e22;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-left: 4px solid #e67e22;
+            padding-left: 0.8rem;
+        }
+        .topic-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        .topic-list a {
+            display: block;
+            background: #ecf0f1;
+            padding: 0.6rem 1rem;
+            text-decoration: none;
+            color: #2c3e50;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+        .topic-list a:hover {
+            background: #e67e22;
+            color: white;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+        hr {
+            margin: 1rem 0;
+            border-color: #ddd;
+        }
+        button, .btn {
+            background: #e67e22;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+        button:hover {
+            background: #d35400;
+        }
+        .quiz-area {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .question {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 5px;
+        }
+        .feedback {
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        canvas {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+        .tool-box {
+            background: #ecf0f1;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+        }
+        input, select, textarea {
+            padding: 0.4rem;
+            margin: 0.3rem 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>AZS<span>.</span></h1>
+    <p>Learn Computer Science • Statistics • Mathematics</p>
+</div>
+
+<div class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="cs.html">💻 Computer Science</a>
+    <a href="statistics.html">📊 Statistics</a>
+    <a href="mathematics.html">📐 Mathematics</a>
+    <a href="tools.html">🛠️ Tools</a>
+</div>
+
+<div class="container">
+    <div class="card">
+        <h2>Welcome to AZS</h2>
+        <p>Your free learning platform for Computer Science, Statistics, and Mathematics. Explore topics, take quizzes, and use interactive tools.</p>
+    </div>
+
+    <div class="card">
+        <h2>📚 Subjects</h2>
+        <div class="topic-list">
+            <a href="cs.html">Computer Science</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="mathematics.html">Mathematics</a>
+            <a href="tools.html">Tools & Calculators</a>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>📝 Quick Quiz Sample</h2>
+        <div class="quiz-area">
+            <div class="question">
+                <p><strong>1.</strong> What is the time complexity of binary search?</p>
+                <label><input type="radio" name="q1" value="O(n)"> O(n)</label><br>
+                <label><input type="radio" name="q1" value="O(log n)"> O(log n)</label><br>
+                <label><input type="radio" name="q1" value="O(n²)"> O(n²)</label><br>
+                <label><input type="radio" name="q1" value="O(1)"> O(1)</label><br>
+                <button onclick="checkAnswer('q1', 'O(log n)', 'fb1')">Check</button>
+                <div id="fb1" class="feedback"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p>AZS - Learn with Quizzes & Tools | All content for educational purposes</p>
+</div>
+
+<script>
+    function checkAnswer(radioName, correctAnswer, feedbackId) {
+        let radios = document.getElementsByName(radioName);
+        let selected = null;
+        for(let i = 0; i < radios.length; i++) {
+            if(radios[i].checked) {
+                selected = radios[i].value;
+                break;
+            }
+        }
+        let feedback = document.getElementById(feedbackId);
+        if(!selected) {
+            feedback.innerHTML = '<span style="color:red;">❌ Please select an answer.</span>';
+            return;
+        }
+        if(selected === correctAnswer) {
+            feedback.innerHTML = '<span style="color:green;">✅ Correct! Great job.</span>';
+        } else {
+            feedback.innerHTML = '<span style="color:red;">❌ Wrong. Correct answer: ' + correctAnswer + '</span>';
+        }
+    }
+</script>
+
+</body>
+</html>
