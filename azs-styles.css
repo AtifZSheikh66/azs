@@ -199,6 +199,17 @@ h1 {
     line-height: 1.5;
 }
 
+/* ------- HYPERLINKS ------------*/
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #facc15;
+    text-decoration: underline;
+}
+
 /* ---------- FOOTER ---------- */
 footer {
     text-align: center;
