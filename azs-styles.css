@@ -38,16 +38,17 @@ body {
 
 .header-inner {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    gap: 12px;
+    gap: 16px;
 }
-
 
 .logo-area {
     display: flex;
     align-items: baseline;
+    justify-content: center;
     gap: 8px;
     flex-wrap: wrap;
 }
@@ -81,6 +82,7 @@ body {
     gap: 24px;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .nav-links a {
@@ -99,21 +101,6 @@ body {
     padding: 40px 0 64px;
 }
 
-/* ---------- BREADCRUMB ---------- */
-.breadcrumb {
-    font-size: 0.85rem;
-    margin-bottom: 20px;
-    color: #475569;
-}
-
-.breadcrumb a {
-    color: #2563eb;
-    text-decoration: none;
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
 
 /* ---------- TUTORIAL HEADER ---------- */
 .tutorial-header {
@@ -212,8 +199,6 @@ h1 {
     line-height: 1.5;
 }
 
-
-
 /* ---------- FOOTER ---------- */
 footer {
     text-align: center;
@@ -237,15 +222,11 @@ footer {
     }
     .header-inner {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        gap: 16px;
     }
-    .step-box {
-        padding: 20px;
-    }
-    .cta-section {
-        padding: 32px 20px;
-    }
-    .roadmap-list {
-        grid-template-columns: 1fr;
+    .nav-links {
+        gap: 16px;
+        flex-wrap: wrap;
     }
 }
