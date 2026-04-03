@@ -4,119 +4,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>AZS - DSA Tutorial: Learn Data Structures & Algorithms</title>
-    <meta name="description" content="Master Data Structures and Algorithms with AZS. Comprehensive DSA tutorial covering arrays, trees, sorting, searching, and more. Step-by-step learning for beginners to advanced.">
+    <meta name="description" content="Master Data Structures and Algorithms with AZS. Comprehensive DSA tutorial covering arrays, trees, sorting, searching, and more. Step-by-step learning.">
     <meta name="keywords" content="DSA, Data Structures, Algorithms, AZS, Tutorial, Array, Linked List, Tree, Sorting, Searching">
     <meta name="author" content="AZS">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- Link to external CSS file that will be used across all pages -->
+    <link rel="stylesheet" href="azs-styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo">AZS<span>⚡</span></div>
+                <div class="tagline">Code. Create. Conquer.</div>
+            </div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Tutorials</a>
+                <a href="#">Courses</a>
+                <a href="#">Practice</a>
+                <a href="#">Interview Prep</a>
+            </div>
+        </div>
+    </header>
 
-        body {
-            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f7f9fc;
-            color: #1e2a3e;
-            line-height: 1.5;
-        }
+    <main class="main-content">
+        <div class="container">
+            <!-- breadcrumb -->
+            <div class="breadcrumb">
+                <a href="#">AZS</a> / <a href="#">DSA</a> / DSA Tutorial
+            </div>
 
-        /* Modern container */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
+            <div class="tutorial-header">
+                <h1>DSA Tutorial <span style="color:#facc15;">📘</span></h1>
+                <div class="last-updated">📅 Last Updated : 2 Apr, 2026</div>
+                <div class="description">
+                    <strong>DSA stands for Data Structures and Algorithms.</strong> Data structures manage how data is stored and accessed. Algorithms focus on processing this data. 
+                    Examples of data structures are Array, Linked List, Tree and Heap, and examples of algorithms are Binary Search, Quick Sort and Merge Sort.
+                </div>
+                <!-- simple text lines instead of cards -->
+                <div class="highlight-text-list">
+                    <p>🌍 Foundation for almost every software like GPS, Search Engines, AI ChatBots, Gaming Apps, Databases, Web Applications, etc</p>
+                    <p>🏢 Top Companies like Google, Microsoft, Amazon, Apple, Meta and many other heavily focus on DSA in interviews.</p>
+                    <p>🧠 Learning DSA boosts your problem-solving abilities and make you a stronger programmer.</p>
+                </div>
+            </div>
 
-        /* Header & Navigation */
-        .site-header {
-            background-color: #0f172a;
-            color: white;
-            padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
+            <!-- Topic Wise Complete Tutorials Section - simple text only -->
+            <div>
+                <h2 class="section-title">📚 Topic Wise Complete Tutorials</h2>
+                <p class="section-subtitle">Below are the recommended different topics to learn complete DSA.</p>
+            </div>
 
-        .header-inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
+            <!-- plain text topics list - no cards, just descriptive text -->
+            <div class="topics-plain-list">
+                <div class="topic-item">
+                    <h3>📊 Arrays</h3>
+                    <p>Foundation of data storage. Learn traversal, searching, sorting, sliding window, and two-pointer techniques. Beginner friendly with 24 practice problems.</p>
+                </div>
+                <div class="topic-item">
+                    <h3>🔗 Linked List</h3>
+                    <p>Singly, doubly, circular lists. Operations: insertion, deletion, reversal, cycle detection. 18 classic problems.</p>
+                </div>
+                <div class="topic-item">
+                    <h3>📚 Stack & Queue</h3>
+                    <p>LIFO & FIFO concepts, monotonic stack, deque, priority queue and real-world applications.</p>
+                </div>
+                <div class="topic-item">
+                    <h3>🔄 Recursion & Backtracking</h3>
+                    <p>Recursive thinking, N-Queens, subset generation, combinatorial problems. 22 challenges.</p>
+                </div>
+                <div class="topic-item">
+                    <h3>🌳 Trees</h3>
+                    <p>Binary Trees, BST, AVL, Tree traversals, LCA, and tree DP concepts. 28 essential problems.</p>
+                </div>
+                <div class="topic-item">
+                    <h3>⛰️ Heap / Priority Queue</h3>
+                    <p>Min-heap, max-heap, heapify, heap sort, Top K elements, merge K sorted lists.</p>
+                </div>
+                <div class="topic-item">
+                    <h3>🕸️ Graphs</h3>
+                    <p>BFS, DFS, shortest path (Dijkstra, Bellman-Ford), MST, topological sort. 30+ high-weightage problems.</p>
+                </div>
+                <div class="topic-item">
+                    <h3>⚙️ Sorting & Searching</h3>
+                    <p>Quick sort, merge sort, binary search variants, counting sort, radix sort. Core DSA concepts.</p>
+                </div>
+                <div class="topic-item">
+                    <h3>🧬 Dynamic Programming</h3>
+                    <p>Memoization, tabulation, knapsack, LCS, LIS, matrix chain multiplication. 35 challenging problems.</p>
+                </div>
+                <div class="topic-item">
+                    <h3>🎯 Greedy & Misc</h3>
+                    <p>Activity selection, Huffman coding, interval scheduling, and mathematical algorithms.</p>
+                </div>
+            </div>
 
-        .logo-area {
-            display: flex;
-            align-items: baseline;
-            gap: 8px;
-            flex-wrap: wrap;
-        }
+            <!-- Step by Step Learning Box (simple text, no cards inside) -->
+            <div class="step-box">
+                <h3>📌 Step by Step Learning <span style="font-size:1.8rem;">🎓</span></h3>
+                <p>It is advised to skip the hard problems of every section in the first iteration if you are a complete beginner. Focus on understanding core concepts, then revisit tough challenges. Consistency is key.</p>
+                <div class="step-suggestions">
+                    <span>✅ Start with Arrays</span>
+                    <span>✅ Then Linked Lists & Recursion</span>
+                    <span>✅ Advance to Trees & Graphs</span>
+                </div>
+            </div>
 
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #fff, #94a3b8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+            <!-- Algorithm spotlight - simple text only -->
+            <div style="margin: 48px 0 20px;">
+                <h2 class="section-title">🔥 Algorithm Spotlight</h2>
+                <div class="algorithms-plain-list">
+                    <div class="algo-item">
+                        <h3>🔎 Binary Search <span class="complexity">O(log n)</span></h3>
+                        <p>Efficient searching in sorted arrays. Divide and conquer principle.</p>
+                    </div>
+                    <div class="algo-item">
+                        <h3>⚡ Quick Sort <span class="complexity">O(n log n) average</span></h3>
+                        <p>In-place sorting algorithm using divide & conquer. Widely used in libraries.</p>
+                    </div>
+                    <div class="algo-item">
+                        <h3>🔄 Merge Sort <span class="complexity">O(n log n)</span></h3>
+                        <p>Divide, sort, merge. Excellent for linked lists and external sorting. Stable sort.</p>
+                    </div>
+                </div>
+            </div>
 
-        .logo span {
-            color: #facc15;
-            background: none;
-            -webkit-background-clip: unset;
-            background-clip: unset;
-        }
+            <!-- structured learning path note - simple bullet list -->
+            <div class="roadmap-box">
+                <h3>📖 Complete DSA Roadmap by AZS</h3>
+                <ul class="roadmap-list">
+                    <li>✔️ Complexity Analysis (Time & Space)</li>
+                    <li>✔️ Mathematics for DSA</li>
+                    <li>✔️ Bit Manipulation & Recursion</li>
+                    <li>✔️ Advanced Data Structures (Trie, Segment Tree)</li>
+                    <li>✔️ String Algorithms (KMP, Rabin-Karp)</li>
+                    <li>✔️ Graph Algorithms (Floyd Warshall, Kruskal)</li>
+                    <li>✔️ Interview-specific patterns</li>
+                </ul>
+            </div>
 
-        .tagline {
-            font-size: 0.85rem;
-            color: #cbd5e1;
-            border-left: 1px solid #334155;
-            padding-left: 12px;
-        }
+            <!-- simple CTA section -->
+            <div class="cta-section">
+                <h2>Start Your DSA Journey Today 🚀</h2>
+                <p>Join thousands of learners mastering Data Structures & Algorithms with AZS.</p>
+                <a href="#" class="cta-button">Explore Full Syllabus →</a>
+            </div>
+        </div>
+    </main>
 
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: #e2e8f0;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: #facc15;
-        }
-
-        /* Main content */
-        .main-content {
-            padding: 40px 0 64px;
-        }
-
-        /* breadcrumb (optional) */
-        .breadcrumb {
-            font-size: 0.85rem;
-            margin-bottom: 20px;
-            color: #475569;
-        }
-
-        .breadcrumb a {
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-
-        /* Title & header meta */
+    <footer>
+        <div class="container">
+            <p>© 2026 AZS — Master Data Structures & Algorithms | Tutorials, Practice Problems, Interview Prep</p>
+            <p>📍 India · Designed for developers, by developers. All resources are curated to help you ace coding interviews.</p>
+        </div>
+    </footer>
+</body>
+</html>        /* Title & header meta */
         .tutorial-header {
             margin-bottom: 32px;
             border-bottom: 1px solid #e2e8f0;
