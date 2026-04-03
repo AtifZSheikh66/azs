@@ -6,6 +6,16 @@
     <title>AZS - DSA Tutorial: Learn Data Structures & Algorithms</title>
     <!-- Link to external CSS file that will be used across all pages -->
     <link rel="stylesheet" href="/azs-styles.css">
+    <style>
+        /* Additional style for smooth header hide/show */
+        .site-header {
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .site-header.hide {
+            transform: translateY(-100%);
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -109,5 +119,28 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Hide header when scrolling down, show when scrolling up
+        let lastScrollTop = 0;
+        const header = document.querySelector('.site-header');
+        const scrollThreshold = 10; // Minimum scroll distance before hiding
+        
+        window.addEventListener('scroll', function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Determine scroll direction
+            if (currentScroll > lastScrollTop && currentScroll > scrollThreshold) {
+                // Scrolling down - hide header
+                header.classList.add('hide');
+            } else if (currentScroll < lastScrollTop) {
+                // Scrolling up - show header
+                header.classList.remove('hide');
+            }
+            
+            // Update last scroll position
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
+    </script>
 </body>
 </html>
