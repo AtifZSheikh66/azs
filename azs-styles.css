@@ -159,17 +159,6 @@ h1 {
     display: inline-block;
 }
 
-.section-title:after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 60%;
-    height: 4px;
-    background: linear-gradient(90deg, #facc15, #eab308);
-    border-radius: 4px;
-}
-
 .section-subtitle {
     color: #475569;
     margin-bottom: 32px;
